@@ -1,9 +1,9 @@
 # Recent FM
 ![Recent FM](https://raw.githubusercontent.com/djalmaaraujo/recent-fm/master/www/icon.png)
 
-My Recent Track + Weekly Artists Phonegap App
+My Recent Track + Weekly Artists Phonegap App using Last.fm API.
 
-If you wannt to fork, be careful. Terrible '3 hours app made' code.
+If you want to fork, be careful. It's a terrible '3 hours app' made. Weird things can happen.
 
 ## Screenshots
 
