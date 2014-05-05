@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="assets/css/topcoat-mobile-light.min.css" />
+		<link rel="stylesheet" href="assets/css/snap.css" />
+		<link rel="stylesheet" href="assets/css/fastgap.min.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+	  <script src="assets/js/tpl.js"></script>
+	  <script src="assets/js/moment.min.js"></script>
+	  <script src="assets/js/fastgap.min.js"></script>
+		<script src="assets/js/fastgap.controllers.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Recent FM</title>
+	</head>
+
+	<body>
+		<div id="page">
+			<div class="snap-drawers">
+				<menu id="menu">
+					<div class="topcoat-list" id="menu-content">
+						<ul class="topcoat-list__container">
+							<li class="topcoat-list__item botoes-app" data-url="home.html" data-controler='HomeController'>
+								Recent Tracks
+							</li>
+							<li class="topcoat-list__item botoes-app" data-url="weekly.html" data-controler='WeeklyController'>
+								Weekly Artists
+							</li>
+						</ul>
+					</div>
+				</menu>
+			</div>
+
+			<div id="content" class="snap-content">
+				<header id="header-app">
+					<div id="menu-button"></div>
+				</header>
+				<div id="scroll" class="overthrow"></div>
+			</div>
+		</div>
+
+		<script type="text/html" id="weekly_tpl">
+			<li><%= name %> (<%= count %>)</li>
+		</script>
+
+		<script type="text/html" id="track_tpl">
+		  <li class="cf">
+		  	<div class="track-image">
+		  		<img src="<%= image %>" />
+		  	</div>
+		  	<div class="track-description">
+		  		<div class="track-content">
+						<span class="track-title"><%= title %></span>
+		  			<span class="track-artist"><%= artist %> (<%= album %>)</span>
+		  			<% if (!playing) { %>
+		  				<span class="track-time"><%= moment(when).fromNow() %></span>
+		  			<% } else { %>
+		  				<span class="track-playing">Now playing</span>
+		  			<% } %>
+		  		</div>
+		  	</div>
+		  </li>
+		</script>
+	</body>
+</html>

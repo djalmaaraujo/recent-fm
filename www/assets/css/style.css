@@ -1,0 +1,224 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#menu ul li {
+  color: #A02615;
+  font-weight: bold; }
+
+#scroll {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#content {
+  background: white;
+  color: #A02615; }
+
+#content a {
+  font-weight: bold;
+  color: #A02615;
+  font-size: 13px; }
+
+.title-page {
+  font-size: 30px;
+  color: #A02615;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc; }
+
+.page-item {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px; }
+
+.page-item img {
+  float: right;
+  width: 80px;
+  height: 80px;
+  border-radius: 60px;
+  margin-left: 10px;
+  margin-top: 10px; }
+
+#internal-page {
+  width: 100%; }
+
+#internal-page h1 {
+  font: 5px "Source Sans", helvetica, arial, sans-serif;
+  width: 100%;
+  font-size: 25px;
+  text-align: center; }
+
+.page-item p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px; }
+
+.developers {
+  margin-top: 10px;
+  text-align: center; }
+
+.developers img {
+  border-radius: 60px; }
+
+.developers div {
+  display: inline-block;
+  padding: 5px; }
+
+/*-----------------------*/
+
+html,
+body {
+  background: white;
+}
+body {
+  background: #f4f4f4;
+}
+/* APP LOGO IMG */
+
+header#header-app {
+  height: 60px;
+  text-align: center;
+  background: #ab0207 url('../img/fastgap_logo.jpg') no-repeat center;
+}
+/* BOX LOAD PAGES */
+
+/* SCROLL */
+.overthrow-enabled #scroll {
+  background: white;
+}
+/* MENU BUTTON */
+
+#menu-button {
+  top: 5px;
+  left: 3px;
+  width: 80px;
+  color: white;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 37px;
+  background: #345365;
+  background: url('../img/back.png') no-repeat center;
+}
+/* MENU APP */
+
+menu {
+  width: 180px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+
+/* Loading */
+div.loading {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 150px auto 0 auto;
+  background: url('../img/loading.gif');
+}
+
+/* Track list */
+.track-list {
+  width: 100%;
+}
+
+.track-list li {
+  display: block;
+  min-height: 110px;
+  clear: both;
+  position: relative;
+}
+
+.track-playing {
+  font-size: 10px;
+  color: white;
+  padding: 4px 8px;
+  display: inline-block;
+  background: #A02615;
+  border-radius: 3px;
+}
+
+.track-description,
+.track-image {
+  width: 70%;
+  float: left;
+}
+
+.track-image {
+  width: 30%;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.track-description .track-content {
+  width: 100%;
+  padding: 10px;
+}
+
+.track-title,
+.track-artist,
+.track-time {
+  display: block;
+}
+
+.track-title {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.track-artist {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+
+.track-time {
+  color: #666;
+  font-size: 0.6em;
+}
+
+/* Weekly */
+#weekly-artist {
+  width: 95%;
+}
+#weekly-artist li {
+  float: left;
+  padding: 10px 15px;
+  background: #333;
+  border-radius: 3px;
+  color: white;
+  margin: 4px;
+  font-size: 1em;
+}
