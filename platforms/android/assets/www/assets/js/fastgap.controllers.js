@@ -11,7 +11,7 @@ var HomeController = function () {};
 HomeController.prototype.initialize = function () {
   var self = this;
 
-  API = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=djalmaaraujo&api_key=a01a539651177e4422eb7e71882e14fa&format=json";
+  API = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=djalmaaraujo&api_key=a01a539651177e4422eb7e71882e14fa&format=json&limit=50";
   $.ajax({
     url: API,
     type: "GET",
@@ -39,7 +39,10 @@ HomeController.prototype.handleRecentTracks = function (data) {
   });
 
   trackList.append(tracksTemplates);
-  $("#internal-page").html(trackList);
+  $("#internal-page")
+    .html(trackList)
+    .append('<hr />')
+    .append('End of your last 50 songs');
 }
 
 HomeController.prototype.destroy = function () {
